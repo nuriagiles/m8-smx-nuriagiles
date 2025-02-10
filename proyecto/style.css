@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid #000;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding: 80px;
+    gap: 30px;
+}
+.text-content {
+    max-width: 90%;
+}
+.text-content h1 {
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+.description {
+    color: #333;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: start;
+}
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.btn {
+    display: inline-block;
+    background: none;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.page-counter {
+    font-size: 14px;
+    font-weight: bold;
+}
+.image-content {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: absolute;
+    width: 1312px;
+    height: 457px;
+    left: 100px;
+    top: 455px;
+    background: url(../proyecto/imagen/img1\(\).png);
+    border-radius: 20px;
+
+}
+.image-content img {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+}
