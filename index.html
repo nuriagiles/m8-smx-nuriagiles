@@ -1,708 +1,701 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecte 2 - CARS</title>
-    <link rel="icon" href="./img/iconos/icono.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="fonts.css">
-    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <style>
-            body {
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'SF Pro Display', sans-serif;
-            max-width: 1312px;
-            margin: auto;
-        }
-
-        hr {
-            height: 1px;
-            border: none;
-            background-color: #000;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: auto;
-        }
-
-        .nav__logo {
-            border: solid black 2px;
-            font-family: Bahn Pro Regular;
-            font-size: 30px;
-            height: fit-content;
-            width: 100px;
-            text-align: center;
-        }
-
-        .nav__list {
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
-            width: 50%;
-            padding: 0;
-            flex-wrap: wrap;
-            margin: 10px;
-            font-size: 1.1em;
-        }
-
-        .nav__item {
-            list-style: none;
-            margin: auto;
-            padding: 10px;
-            transform: scale(.8);
-        }
-
-        .nav__link {
-            text-decoration: none;
-            color: #000;
-        }
-
-        .nav__icons {
-            display: flex;
-            gap: 20px;
-            scale: 1.2;
-        }
-
-        .nav__list2 {
-            display: flex;
-            padding: 20px;
-            gap: 20px;
-            padding-right: 5px;
-        }
-
-        .nav__item2 {
-            list-style: none;
-        }
-
-        .separación_nav {
-            margin-bottom: 50px;
-        }
-
-
-        @media screen and (max-width: 1100px) {
-            .nav__list {
-                width: 70%;
-            }
-            .nav__logo {
-                margin-left: 10px;
-            }
-        }
-
-        @media screen and (max-width: 900px) {
-            .nav__list {
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            .nav {
-                width: 100%;
-            }
-            
-            .nav__list {
-                margin: 0;
-            }
-            .nav__list2 {
-                margin: 0;
-                padding: 10px;
-                flex-direction: column;
-            }
-            .nav__item {
-                margin: 0;
-            }
-            .nav__logo {
-                margin: 0;
-            }
-        }
-
-        header {
-            margin: auto;
-        }
-
-        .titulo {
-            font-size: 96px;
-            font-weight: 500;
-            width: fit-content;
-            position: relative;
-            left: -5px;
-        }
-
-        .hedaer__parrafo-titulo {
-            margin-bottom: 0;
-            font-size: .8em;
-            position: relative;
-            top: 5px;
-        }
-
-        .header__container{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .header__div {
-            width: 70%;
-        }
-
-        .segundo--div {
-            margin-top: 40px;
-            width: 350px;
-            text-align: justify;
-        }
-
-        .segundo--div__apartado {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .seción-barra-progreso {
-            width: 40%;
-            margin-top: 10px;
-            font-size: .9em;
-            font-weight: bold;
-        }
-
-        .barra-progreso {
-            width: 100%;
-            height: 2px;
-            background-color: #ddd;
-            position: relative;
-            margin-top:10px;
-            border-radius: 2px;
-            
-        }
-
-        .raya-progreso {
-            width: 16.67%;
-            background-color: #333;
-            position: absolute;
-            height: 2px;
-            border-radius: 2px;
-        }
-
-        .titulo {
-            margin: 0;
-        }
-
-        .header__párrafo {
-            font-size: .85em;
-        }
-
-        .boton {
-            border-radius: 50px;
-            padding: 8px 25px;
-            height: fit-content;
-            background-color: #fff;
-            border: 1px solid #000;
-            text-transform: uppercase;
-            font-family: 'SF Pro Display';
-            font-size: 1em;
-        }
-
-        .imagen__header {
-            max-width: 100%;
-            margin: 20px 0;
-        }
-
-        .separacion_header {
-            margin: 10px 0;
-            margin-top: 45px;
-        }
-
-
-        .main__primera-secion {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .main__primera-seción_div {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .segundo--boton {
-            margin-top: 20px;
-        }
-
-        .main__flechas {
-            display: flex;
-            justify-content: end;
-            margin: 10px;
-            gap: 20px;
-        }
-
-        #fecha-atras {
-            color: #ddd;
-        }
-
-        .main__subtitulo {
-            font-size: 4em;
-            width: 30%;
-            font-weight: 100;
-            margin: 10px;
-            text-transform: uppercase;
-        }
-
-        .main__secion-imagenes {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-
-        .main__secion-imagenes_parte {
-            width: 300px;
-        }
-
-        .main__imagen {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 20px;
-        }
-
-        .imagen--diferente {
-            object-position: 80%;
-        }
-
-        .tipo-coche {
-            color: #ccc;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .descripcion {
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .separacion__main {
-            margin: 50px 0;
-        }
-
-        .main_segunda-sesion {
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            align-items: center;
-        }
-
-        .main_segunda-sesion_parrafo {
-            width: 210px;
-            text-align: justify;
-        }
-
-        .main_raya-segunda-sesion {
-            margin: 20px 0 40px 0;
-            transform: scaleY(2);
-        }
-
-        .main__segunda-secion_imagen {
-            width: 800px;
-        }
-
-        .tercer--boton {
-            margin: 30px;
-            margin-bottom: 30px;
-        }
-
-
-        strong {
-            text-transform: uppercase;
-            font-weight: 500;
-            display: block;
-        }
-
-        .main__subtitulo {
-            margin-left: 0;
-        }
-
-        .main_tercera-sesion_texto {
-            font-size: .78em;
-            width: 90%;
-            text-align: justify;
-        }
-
-        .main_tercera-secion_segunda-parte {
-            display: flex;
-            justify-content: end;
-            gap: 50px;
-            align-items: center;
-            margin: 80px 0;
-        }
-
-        .main_circulo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px;
-            border: 1px solid #000;
-            width: 100px;
-            height: 100px;
-            border-radius: 100%;
-            position: relative;
-            top: -35px;
-        }
-
-        .main_circulo-texto {
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        .imagen-coche5 {
-            object-fit: cover;
-            width: 728px;
-            height: 317px;
-            border-radius: 20px;
-        }
-
-        .texto-importante_imagen-grande {
-            margin-top: 35px;
-        }
-
-        .texto_imagen-grande {
-            margin-top: 8px;
-            font-size: .85em;
-            font-style: italic;
-            font-weight: 300;
-            color: #333;
-        }
-
-        .footer_separacion {
-            margin: 60px 0;
-            margin-top: 130px;
-        }
-
-        .footer {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .footer_primera-parte {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .footer_titulo {
-            font-size: 4em;
-            font-weight: 300;
-            text-transform: uppercase;
-            margin: 0;
-            width: 90%;
-            margin-bottom: 10px;
-        }
-
-        .footer_input {
-            margin: 20px 0;
-            padding: 10px;
-            width: 30%;
-            border: none;
-            border-bottom: 1px solid #ccc;
-            padding-left: 0;
-            outline: 0;
-            color: #333;
-        }
-
-        #footer_input-icono {
-            position: relative;
-            right: 20px;
-            font-size: 1em;
-        }
-
-        .footer_input::placeholder {
-            color: #ccc;
-        }
-
-        .footer_pay {
-            display: flex;
-            gap: 50px;
-            margin: 50px 0;
-        }
-
-        .footer_segunda-parte {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .footer_segunda-parte_primer-sesion {
-            display: flex;
-            gap: 40px;
-        }
-
-        .footer_menu {
-            width: 100px;
-        }
-
-        .titulo-menu, .titulo-boutiques {
-            margin-bottom: 30px;
-        }
-
-        .list_menu, .list_boutiques {
-            padding: 0;
-        }
-
-        .menu__item, .boutiques__item {
-            list-style: none;
-            padding: 5px 0;
-            width: 100px;
-        }
-
-        .footer_botones {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 20px;
-            width: 250px;
-        }
-
-        .footer-boton-uno {
-            margin-top: 50px;
-        }
-
-        .footer-boton-dos {
-            width: 150px;
-        }
-
-        .footer_boutiques {
-            width: 120px;
-        }
-
-        .list_boutiques {
-            width: 150px;
-        }
-
-        .boutiques__item {
-            width: 150px;
-        }
-
-        .footer_segunda-parte_segunda-sesion {
-            display: flex;
-            margin: 50px 0;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .footer_iconos {
-            display: flex;
-            justify-content: center;
-            width: 80%;
-            gap: 70px;
-            margin-left: 30px;
-        }
-
-        .footer_expandir {
-            transform: scale(1.5);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecte 2 - CARS</title>
+  <link rel="icon" href="./img/iconos/icono.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="stylesheet" href="fonts.css">
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'SF Pro Display', sans-serif;
+      max-width: 1312px;
+      margin: auto;
+    }
+
+    hr {
+      height: 1px;
+      border: none;
+      background-color: #000;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+    }
+
+    .navigation-logo {
+      border: solid black 2px;
+      font-family: Bahn Pro Regular;
+      font-size: 30px;
+      height: fit-content;
+      width: 100px;
+      text-align: center;
+    }
+
+    .navigation-menu {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+      width: 50%;
+      padding: 0;
+      flex-wrap: wrap;
+      margin: 10px;
+      font-size: 1.1em;
+    }
+
+    .navigation-menu-item {
+      list-style: none;
+      margin: auto;
+      padding: 10px;
+      transform: scale(.8);
+    }
+
+    .navigation-menu-link {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .navigation-icons {
+      display: flex;
+      gap: 20px;
+      scale: 1.2;
+    }
+
+    .navigation-icons-list {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      padding-right: 5px;
+    }
+
+    .navigation-icons-item {
+      list-style: none;
+    }
+
+    .navigation-separator {
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 1100px) {
+      .navigation-menu {
+        width: 70%;
+      }
+      .navigation-logo {
+        margin-left: 10px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .navigation-menu {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .navigation {
+        width: 100%;
+      }
+      .navigation-menu {
+        margin: 0;
+      }
+      .navigation-icons-list {
+        margin: 0;
+        padding: 10px;
+        flex-direction: column;
+      }
+      .navigation-menu-item {
+        margin: 0;
+      }
+      .navigation-logo {
+        margin: 0;
+      }
+    }
+
+    header {
+      margin: auto;
+    }
+
+    .header-title {
+      font-size: 96px;
+      font-weight: 500;
+      width: fit-content;
+      position: relative;
+      left: -5px;
+      margin: 0;
+    }
+
+    .header-subtitle {
+      margin-bottom: 0;
+      font-size: .8em;
+      position: relative;
+      top: 5px;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .header-content {
+      width: 70%;
+    }
+
+    .header-secondary {
+      margin-top: 40px;
+      width: 350px;
+      text-align: justify;
+    }
+
+    .header-secondary-group {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .progress-bar-container {
+      width: 40%;
+      margin-top: 10px;
+      font-size: .9em;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 2px;
+      background-color: #ddd;
+      position: relative;
+      margin-top:10px;
+      border-radius: 2px;
+    }
+
+    .progress-bar-fill {
+      width: 16.67%;
+      background-color: #333;
+      position: absolute;
+      height: 2px;
+      border-radius: 2px;
+    }
+
+    .header-description {
+      font-size: .85em;
+    }
+
+    .btn {
+      border-radius: 50px;
+      padding: 8px 25px;
+      height: fit-content;
+      background-color: #fff;
+      border: 1px solid #000;
+      text-transform: uppercase;
+      font-family: 'SF Pro Display';
+      font-size: 1em;
+    }
+
+    .header-image {
+      max-width: 100%;
+      margin: 20px 0;
+    }
+
+    .header-separator {
+      margin: 10px 0;
+      margin-top: 45px;
+    }
+
+    .main-first-section {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main-first-section-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .btn-secondary {
+      margin-top: 20px;
+    }
+
+    .main-arrows {
+      display: flex;
+      justify-content: end;
+      margin: 10px;
+      gap: 20px;
+    }
+
+    #back-arrow {
+      color: #ddd;
+    }
+
+    .main-subtitle {
+      font-size: 4em;
+      width: 30%;
+      font-weight: 100;
+      margin: 10px;
+      text-transform: uppercase;
+    }
+
+    .main-images-section {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .main-image-part {
+      width: 300px;
+    }
+
+    .main-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 20px;
+    }
+
+    .image-different {
+      object-position: 80%;
+    }
+
+    .car-type {
+      color: #ccc;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .description {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .main-separator {
+      margin: 50px 0;
+    }
+
+    .main-second-section {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+    }
+
+    .main-second-section-paragraph {
+      width: 210px;
+      text-align: justify;
+    }
+
+    .main-second-section-divider {
+      margin: 20px 0 40px 0;
+      transform: scaleY(2);
+    }
+
+    .main-second-section-image {
+      width: 800px;
+    }
+
+    .btn-tertiary {
+      margin: 30px;
+      margin-bottom: 30px;
+    }
+
+    .main-third-section {
+      /* Se mantiene sin cambios estructurales */
+    }
+
+    .main-third-section-text {
+      font-size: .78em;
+      width: 90%;
+      text-align: justify;
+    }
+
+    .main-third-section-secondary {
+      display: flex;
+      justify-content: end;
+      gap: 50px;
+      align-items: center;
+      margin: 80px 0;
+    }
+
+    .main-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      border: 1px solid #000;
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      position: relative;
+      top: -35px;
+    }
+
+    .main-circle-text {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .car-image-large {
+      object-fit: cover;
+      width: 728px;
+      height: 317px;
+      border-radius: 20px;
+    }
+
+    .large-image-highlight {
+      margin-top: 35px;
+    }
+
+    .large-image-text {
+      margin-top: 8px;
+      font-size: .85em;
+      font-style: italic;
+      font-weight: 300;
+      color: #333;
+    }
+
+    .footer-separator {
+      margin: 60px 0;
+      margin-top: 130px;
+    }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-first-part {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .footer-title-input {
+      /* Agrupa título e input */
+    }
+
+    .footer-title {
+      font-size: 4em;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0;
+      width: 90%;
+      margin-bottom: 10px;
+    }
+
+    .footer-input {
+      margin: 20px 0;
+      padding: 10px;
+      width: 30%;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding-left: 0;
+      outline: 0;
+      color: #333;
+    }
+
+    #footer-input-icon {
+      position: relative;
+      right: 20px;
+      font-size: 1em;
+    }
+
+    .footer-input::placeholder {
+      color: #ccc;
+    }
+
+    .footer-payment-options {
+      display: flex;
+      gap: 50px;
+      margin: 50px 0;
+    }
+
+    .footer-second-part {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .footer-second-part-first {
+      display: flex;
+      gap: 40px;
+    }
+
+    .footer-menu {
+      width: 100px;
+    }
+
+    .menu-title,
+    .boutiques-title {
+      margin-bottom: 30px;
+    }
+
+    .menu-list,
+    .boutiques-list {
+      padding: 0;
+    }
+
+    .menu-item,
+    .boutiques-item {
+      list-style: none;
+      padding: 5px 0;
+      width: 100px;
+    }
+
+    .footer-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      width: 250px;
+    }
+
+    .footer-btn-one {
+      margin-top: 50px;
+    }
+
+    .footer-btn-two {
+      width: 150px;
+    }
+
+    .footer-boutiques {
+      width: 120px;
+    }
+
+    .boutiques-list {
+      width: 150px;
+    }
+
+    .boutiques-item {
+      width: 150px;
+    }
+
+    .footer-second-part-second {
+      display: flex;
+      margin: 50px 0;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      gap: 70px;
+      margin-left: 30px;
+    }
+
+    .footer-expand-icon {
+      transform: scale(1.5);
+    }
+  </style>
 </head>
 <body>
 
-    <nav class="nav">
-        <div class="nav__logo">
-            CARSPORT
-        </div>
-        <ul class="nav__list">
-            <li class="nav__item">
-                <a class="nav__link" href="">ACCEUIL</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="">VOITURES</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="">CATÉGORIES</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="">CONTACT</a>
-            </li>
-        </ul>
-        <div class="nav__icons">
-            <ul class="nav__list2">
-                <li class="nav__item2">
-                    <span class="material-symbols-outlined">account_circle</span>
-                </li>
-                <li class="nav__item2">
-                    <span class="material-symbols-outlined">shopping_cart</span>
-                </li>
-            </ul>
-        </div>
-    </nav>
-   <hr class="separación_nav">
+  <nav class="navigation">
+    <div class="navigation-logo">
+      CARSPORT
+    </div>
+    <ul class="navigation-menu">
+      <li class="navigation-menu-item">
+        <a class="navigation-menu-link" href="">ACCEUIL</a>
+      </li>
+      <li class="navigation-menu-item">
+        <a class="navigation-menu-link" href="">VOITURES</a>
+      </li>
+      <li class="navigation-menu-item">
+        <a class="navigation-menu-link" href="">CATÉGORIES</a>
+      </li>
+      <li class="navigation-menu-item">
+        <a class="navigation-menu-link" href="">CONTACT</a>
+      </li>
+    </ul>
+    <div class="navigation-icons">
+      <ul class="navigation-icons-list">
+        <li class="navigation-icons-item">
+          <span class="material-symbols-outlined">account_circle</span>
+        </li>
+        <li class="navigation-icons-item">
+          <span class="material-symbols-outlined">shopping_cart</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <hr class="navigation-separator">
 
-   <header class="header">
-        <div class="header__container">
-            <div class="header__div">
-                <p class="hedaer__parrafo-titulo">BY CARSPORT</p>
-                <h1 class="titulo">L´EXPERIENCE EXTRAORDINAIRE</h1>
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <p class="header-subtitle">BY CARSPORT</p>
+        <h1 class="header-title">L´EXPERIENCE EXTRAORDINAIRE</h1>
+      </div>
+      <div class="header-secondary">
+        <p class="header-description">Notre journaliste Jean-Pierre Gagick essaie le tout dernier modèle de Porsche : la 911 S/T. Et pour trouver l’origine du nom "S/T", il faut remonter à la création originelle de 1969. À cette époque, le constructeur souhaite créer une version allégée de la 911 S pour la compétition. Face à ce succès inattendu, Porsche prend donc la décision de créer son modèle homologué pour la route.</p>
+        <div class="header-secondary-group">
+          <button class="btn">DESCUBRIR</button>
+          <div class="progress-bar-container">
+            01 / 06
+            <div class="progress-bar">
+              <div class="progress-bar-fill"></div>
             </div>
-            <div class="header__div segundo--div">
-                <P class="header__párrafo">Notre journaliste Jean-Pierre Gagick essaie le tout dernier modèle de Porsche : la 911 S/T. Et pour trouver l’origine du nom "S/T", il faut remonter à la création originelle de 1969. À cette époque, le constructeur souhaite créer une version allégée de la 911 S pour la compétition. Face à ce succès inattendu, Porsche prend donc la décision de créer son modèle homologué pour la route.</P>
-                <div class="segundo--div__apartado">
-                    <button class="boton">DESCUBRIR</button>
-                    <div class="seción-barra-progreso">
-                        01 / 06
-                        <div class="barra-progreso">
-                            <div class="raya-progreso"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <img class="imagen__header" src="./img/imagenes/img1().png" alt="Imagen de coche">
-   </header>
-   <hr class="separacion_header">
+      </div>
+    </div>
+    <img class="header-image" src="./img/imagenes/img1().png" alt="Imagen de coche">
+  </header>
+  <hr class="header-separator">
 
-   <main class="main">
-        <section class="main__primera-secion">
-            <h2 class="main__subtitulo">Dernière Collection</h2>
-            <div class="main__primera-seción_div">
-                <button class="boton segundo--boton">TOUTES LES VOITURES</button>
-                <div class="main__flechas">
-                    <span id="fecha-atras" class="material-symbols-outlined">arrow_back_ios</span>
-                    <span class="material-symbols-outlined">arrow_forward_ios</span>
-                </div>
-            </div>
-        </section>
-        <section class="main__secion-imagenes">
-            <div class="main__secion-imagenes_parte">
-                <img class="main__imagen" src="./img/imagenes/img2.png" alt="imagen-coche1">
-                <p class="tipo-coche">Porche 911 GT3</p>
-                <strong class="descripcion">body kit carbon</strong>
-            </div>
-            <div class="main__secion-imagenes_parte">
-                <img class="main__imagen" src="./img/imagenes/img3.png" alt="imagen-coche2">
-                <p class="tipo-coche">Porche CAYENNE</p>
-                <strong class="descripcion">Présentation</strong>
-            </div>
-            <div class="main__secion-imagenes_parte">
-                <img class="main__imagen imagen--diferente" src="./img/imagenes/img4.png" alt="imagen-coche3">
-                <p class="tipo-coche">Porche 911 3.2</p>
-                <strong class="descripcion">body kit carbon</strong>
-            </div>
-            <div class="main__secion-imagenes_parte">
-                <img class="main__imagen imagen--diferente" src="./img/imagenes/img5.png" alt="imagen-coche4">
-                <p class="tipo-coche">Porche 988 SPYDER</p>
-                <strong class="descripcion">showcase</strong>
-            </div>
-        </section>
-        <hr class="separacion__main">
-
-        <section class="main_segunda-sesion">
-            <p class="main_segunda-sesion_parrafo">LAISSER VOUS TENTER PAR UN UNIVERS DE VITESSE PUR</p>
-            <span class="main_raya-segunda-sesion">|</span>
-            <img class="main__segunda-secion_imagen" src="./img/imagenes/img6().png" alt="imagen SHOW ROOM">
-            <button class="boton tercer--boton">DÉCOUVRIR</button>
-        </section>
-        <hr class="separacion__main">
-
-        <section class="main_tercera-sesion">
-            <h2 class="main__subtitulo">Boutique</h2>
-            <div class="main__secion-imagenes">
-                <div class="main__secion-imagenes_parte">
-                    <img class="main__imagen" src="./img/imagenes/img7.png" alt="Producto 1">
-                    <strong>Vestes</strong>
-                    <p class="main_tercera-sesion_texto">Issue de la collection Baron, la montre 219G164 brille par son originalité et sa couleur. </p>
-                </div>
-                <div class="main__secion-imagenes_parte">
-                    <img class="main__imagen" src="./img/imagenes/img8.png" alt="Producto 2">
-                    <strong>Montres</strong>
-                    <p class="main_tercera-sesion_texto">La veste de course, souvent appelée "Racing Jacket", est une pièce de mode audacieuse et dynamique.</p>
-                </div>
-                <div class="main__secion-imagenes_parte">
-                    <img class="main__imagen" src="./img/imagenes/img9.png" alt="Producto 3">
-                    <strong>E-bikes</strong>
-                    <p class="main_tercera-sesion_texto">La gamme E-Motion met l’accent sur le consommateur qui est sensible aux prix mais qui privilégie quand même des produits de qualités.</p>
-                </div>
-                <div class="main__secion-imagenes_parte">
-                    <img class="main__imagen" src="./img/imagenes/img10.png" alt="Producto 4">
-                    <strong>Chaises de bureau</strong>
-                    <p class="main_tercera-sesion_texto">En tissu respirant et dispose d’un support lombaire rembourré réglable en hauteur et profondeur, une caractéristique essentielle.</p>
-                </div>
-            </div>
-            <div class="main_tercera-secion_segunda-parte">
-                <div class="main_circulo">
-                    <p class="main_circulo-texto">tOUs LES produits</p>
-                </div>
-                <div class="main_tercera-sesion_imagen-grande">
-                    <img class="imagen-coche5" src="./img/imagenes/img11().png" alt="Coche 5">
-                    <strong class="texto-importante_imagen-grande">La vitesse n’a plus de limite</strong>
-                    <p class="texto_imagen-grande">Moteur 6 cylindres à plat atmosphérique de 525 chevaux.</p>
-                </div>
-            </div>
-        </section>
-        <hr class="footer_separacion">
-   </main>
-
-   <footer class="footer">
-        <div class="footer_primera-parte">
-            <div class="footer_titulo-input">
-                <h2 class="footer_titulo">
-                    rester informer grâce à la newsletter
-                </h2>
-                <input class="footer_input" type="email" placeholder="Adresse mail">
-                <span id="footer_input-icono" class="material-symbols-outlined">arrow_forward_ios</span>
-            </div>
-            <div class="footer_pay">
-                <img src="img/logos/gpay.png" alt="Google pay">
-                <img src="img/logos/paypal.png" alt="PayPal">
-                <img src="img/logos/visa.png" alt="Visa">
-                <img src="img/logos/apay.png" alt="Apple pay">
-            </div>
+  <main class="main">
+    <section class="main-first-section">
+      <h2 class="main-subtitle">Dernière Collection</h2>
+      <div class="main-first-section-content">
+        <button class="btn btn-secondary">TOUTES LES VOITURES</button>
+        <div class="main-arrows">
+          <span id="back-arrow" class="material-symbols-outlined">arrow_back_ios</span>
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
         </div>
-        <div class="footer_segunda-parte">
-            <div class="footer_segunda-parte_primer-sesion">
-                <div class="footer_menu">
-                    <strong class="titulo-menu">Menu</strong>
-                    <ul class="list_menu">
-                        <li class="menu__item">Acceuil</li>
-                        <li class="menu__item">Voitures</li>
-                        <li class="menu__item">Catégories</li>
-                        <li class="menu__item">Contact</li>
-                    </ul>
-                </div>
-                <div class="footer_botones">
-                    <button class="boton footer-boton-uno">
-                        tOUTES LES VOITURES
-                    </button>
-                    <button class="boton footer-boton-dos">
-                        Découvrir
-                    </button>
-                </div>
-                <div class="footer_boutiques">
-                    <strong class="titulo-boutiques">boutique</strong>
-                    <ul class="list_boutiques">
-                        <li class="boutiques__item">Montre</li>
-                        <li class="boutiques__item">Hoodie</li>
-                        <li class="boutiques__item">E-bike</li>
-                        <li class="boutiques__item">Chaise de bureau</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer_segunda-parte_segunda-sesion">
-                <div class="footer_iconos">
-                    <img src="./img/logos/facebook.png" alt="Facebook">
-                    <img src="./img/logos/Instagram.png" alt="Instagram">
-                    <img src="./img/logos/twitter.png" alt="Twitter">
-                    <img src="./img/logos/linkedin.png" alt="Linkedin">
-                </div>
-                <div class="footer_expandir">
-                    <span class="material-symbols-outlined">
-                        expand_circle_up
-                    </span>
-                </div>
-            </div>
+      </div>
+    </section>
+    <section class="main-images-section">
+      <div class="main-image-part">
+        <img class="main-image" src="./img/imagenes/img2.png" alt="imagen-coche1">
+        <p class="car-type">Porche 911 GT3</p>
+        <strong class="description">body kit carbon</strong>
+      </div>
+      <div class="main-image-part">
+        <img class="main-image" src="./img/imagenes/img3.png" alt="imagen-coche2">
+        <p class="car-type">Porche CAYENNE</p>
+        <strong class="description">Présentation</strong>
+      </div>
+      <div class="main-image-part">
+        <img class="main-image image-different" src="./img/imagenes/img4.png" alt="imagen-coche3">
+        <p class="car-type">Porche 911 3.2</p>
+        <strong class="description">body kit carbon</strong>
+      </div>
+      <div class="main-image-part">
+        <img class="main-image image-different" src="./img/imagenes/img5.png" alt="imagen-coche4">
+        <p class="car-type">Porche 988 SPYDER</p>
+        <strong class="description">showcase</strong>
+      </div>
+    </section>
+    <hr class="main-separator">
+
+    <section class="main-second-section">
+      <p class="main-second-section-paragraph">LAISSER VOUS TENTER PAR UN UNIVERS DE VITESSE PUR</p>
+      <span class="main-second-section-divider">|</span>
+      <img class="main-second-section-image" src="./img/imagenes/img6().png" alt="imagen SHOW ROOM">
+      <button class="btn btn-tertiary">DÉCOUVRIR</button>
+    </section>
+    <hr class="main-separator">
+
+    <section class="main-third-section">
+      <h2 class="main-subtitle">Boutique</h2>
+      <div class="main-images-section">
+        <div class="main-image-part">
+          <img class="main-image" src="./img/imagenes/img7.png" alt="Producto 1">
+          <strong>Vestes</strong>
+          <p class="main-third-section-text">Issue de la collection Baron, la montre 219G164 brille par son originalité et sa couleur. </p>
         </div>
-   </footer>
+        <div class="main-image-part">
+          <img class="main-image" src="./img/imagenes/img8.png" alt="Producto 2">
+          <strong>Montres</strong>
+          <p class="main-third-section-text">La veste de course, souvent appelée "Racing Jacket", est une pièce de mode audacieuse et dynamique.</p>
+        </div>
+        <div class="main-image-part">
+          <img class="main-image" src="./img/imagenes/img9.png" alt="Producto 3">
+          <strong>E-bikes</strong>
+          <p class="main-third-section-text">La gamme E-Motion met l’accent sur le consommateur qui est sensible aux prix mais qui privilégie quand même des produits de qualités.</p>
+        </div>
+        <div class="main-image-part">
+          <img class="main-image" src="./img/imagenes/img10.png" alt="Producto 4">
+          <strong>Chaises de bureau</strong>
+          <p class="main-third-section-text">En tissu respirant et dispose d’un support lombaire rembourré réglable en hauteur et profondeur, une caractéristique essentielle.</p>
+        </div>
+      </div>
+      <div class="main-third-section-secondary">
+        <div class="main-circle">
+          <p class="main-circle-text">tOUs LES produits</p>
+        </div>
+        <div class="car-image-large">
+          <img class="car-image-large" src="./img/imagenes/img11().png" alt="Coche 5">
+          <strong class="large-image-highlight">La vitesse n’a plus de limite</strong>
+          <p class="large-image-text">Moteur 6 cylindres à plat atmosphérique de 525 chevaux.</p>
+        </div>
+      </div>
+    </section>
+    <hr class="footer-separator">
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-first-part">
+      <div class="footer-title-input">
+        <h2 class="footer-title">
+          rester informer grâce à la newsletter
+        </h2>
+        <input class="footer-input" type="email" placeholder="Adresse mail">
+        <span id="footer-input-icon" class="material-symbols-outlined">arrow_forward_ios</span>
+      </div>
+      <div class="footer-payment-options">
+        <img src="img/logos/gpay.png" alt="Google pay">
+        <img src="img/logos/paypal.png" alt="PayPal">
+        <img src="img/logos/visa.png" alt="Visa">
+        <img src="img/logos/apay.png" alt="Apple pay">
+      </div>
+    </div>
+    <div class="footer-second-part">
+      <div class="footer-second-part-first">
+        <div class="footer-menu">
+          <strong class="menu-title">Menu</strong>
+          <ul class="menu-list">
+            <li class="menu-item">Acceuil</li>
+            <li class="menu-item">Voitures</li>
+            <li class="menu-item">Catégories</li>
+            <li class="menu-item">Contact</li>
+          </ul>
+        </div>
+        <div class="footer-buttons">
+          <button class="btn footer-btn-one">
+            tOUTES LES VOITURES
+          </button>
+          <button class="btn footer-btn-two">
+            Découvrir
+          </button>
+        </div>
+        <div class="footer-boutiques">
+          <strong class="boutiques-title">boutique</strong>
+          <ul class="boutiques-list">
+            <li class="boutiques-item">Montre</li>
+            <li class="boutiques-item">Hoodie</li>
+            <li class="boutiques-item">E-bike</li>
+            <li class="boutiques-item">Chaise de bureau</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-second-part-second">
+        <div class="footer-icons">
+          <img src="./img/logos/facebook.png" alt="Facebook">
+          <img src="./img/logos/Instagram.png" alt="Instagram">
+          <img src="./img/logos/twitter.png" alt="Twitter">
+          <img src="./img/logos/linkedin.png" alt="Linkedin">
+        </div>
+        <div class="footer-expand-icon">
+          <span class="material-symbols-outlined">
+            expand_circle_up
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
